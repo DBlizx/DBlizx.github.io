@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+
+<link rel="stylesheet" type="text/css" href="video.css" />
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<script type="text/javascript" src="video.js"></script>
+
+</head>
+
+<video poster="bomi_static_image.jpg" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="BOMI「A_B」MV.webm" type="video/webm">
+</video>
+<div id="polina">
+<h1>The 4MC</h1>
+<p>My favorite Japanese and Korean Albums of 2016
+<p><a href="https://twitter.com/the4MC">@the4mc</a>
+<p>It's that time of the year again. Since I listened to a significantly larger amount of Japanese/Korean albums in 2016 than in previous years, I have created a seperate website for these ablums. The total number of albums/eps was well over 100, so I feel confident with the list.</p>
+<button>The List</button>
+</div>
+
+
+<audio id="background_audio" autoplay>
+  <source src="BOMI「A_B」MV.mp3" />
+</audio> 
+
+<a href="#" class="speaker" id="mute">
+  <span></span>
+
+</a>
+<script>$('.speaker').click(function(e) {
+  e.preventDefault();
+
+	$(this).toggleClass('mute');
+});</script>
+
+<script>var audio = document.getElementById('background_audio');
+
+document.getElementById('mute').addEventListener('click', function (e)
+{
+    e = e || window.event;
+    audio.muted = !audio.muted;
+    e.preventDefault();
+}, false);</script>
+	</body>
+</html>
